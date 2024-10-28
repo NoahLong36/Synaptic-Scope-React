@@ -2,10 +2,10 @@
 
 #Terminal Commands 
 Mac =>
-  npm create-react-app "Synaptic-Scope  //Creates React Template
-  cd "Synaptic-Scope"                   //Opens React Template
-  npm install react-router-dom@6        //Install Library for accessing different   pages
-  npm install react-icons --save        //Install Library for React supported icons
+  1. npm create-react-app "Synaptic-Scope  //Creates React Template
+  2. cd "Synaptic-Scope"                   //Opens React Template
+  3. npm install react-router-dom@6        //Install Library for accessing different   pages
+  4. npm install react-icons --save        //Install Library for React supported icons
 
 Windows/Linux => Commands might differ but should be similar
 
