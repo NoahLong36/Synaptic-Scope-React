@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/styles.css';
+import './styles/sider-styles.css'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import Sider from './components/Sider'
+import Header from './components/Header';
+import Account from './pages/Account';
+import Dashboards from './pages/Dashboards';
+import Contact from './pages/Contact';
+import Login from './pages/Login';
+import Home from './pages/Home'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  return(
+    <div>
+      <Header />
+    <Router>
+      <Sider>
+      <Routes>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/account' element={<Account />}></Route>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/dashboard' element={<Dashboards />}></Route>
+        <Route path='/contact' element={<Contact />}></Route>
+      </Routes>
+      </Sider>
+    </Router>
     </div>
   );
 }
+
 
 export default App;
