@@ -27,16 +27,16 @@ You may also see any lint errors in the console.
 # >Synaptic-Scope 
   # >Node-Modules //Dont Touch 
   # >Public 
-    # >img //Any images used 
+     >img //Any images used 
   # >Src 
-    # >Components 
-    # >Pages 
-    # >Styles 
-    # App.js 
-    # Index.js
-##Workflow =>
-#All Components go inside the compononents folder.
-#These components should be used called their respective 'page' file inside the pages folder.
-#Once the page has been put together it should already be rendered by App.js, and the slider should be able to navigate to your page.
+     >Components 
+     >Pages 
+     >Styles 
+     App.js 
+     Index.js
+## Workflow =>
+ # All Components go inside the compononents folder.
+ # These components should be used called their respective 'page' file inside the pages folder.
+ # Once the page has been put together it should already be rendered by App.js, and the slider should be able to navigate to your page.
 
 
