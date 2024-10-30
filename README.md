@@ -37,6 +37,6 @@ You may also see any lint errors in the console.
 ## Workflow =>
 All Components go inside the compononents folder.  
 These components should be used called their respective 'page' file inside the pages folder.  
-Once the page has been put together it should already be rendered by App.js, and the slider should be able to navigate to your page.  
+Once the page has been put together it should already be rendered by App.js, and the sider should be able to navigate to your page.  
 
 
