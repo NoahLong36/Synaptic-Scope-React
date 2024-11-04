@@ -1,5 +1,6 @@
 import "../App.css";
 import { Form, Input, Button} from "antd";
+import "../styles/userpass.css";
 
 function Userpass() {
 
@@ -17,7 +18,7 @@ function Userpass() {
           <Input.Password placeholder="Password" required></Input.Password>  
           </Form.Item>
           <Form.Item>
-          <Button block type='primary' htmlType='submit'>Log In</Button>  
+          <Button type='primary' htmlType='submit'>Log In</Button>  
           </Form.Item>
         </Form>
       </header>
