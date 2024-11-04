@@ -1,5 +1,4 @@
-import "antd/dist/antd.css";
-import "../../App.css";
+import "../App.css";
 import { Form, Input, Button} from "antd";
 
 function Userpass() {
