@@ -1,0 +1,17 @@
+/* src/styles/TestCard.css */
+.test-card {
+    display: block;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    width: 150px;
+    background-color: #f9f9f9;
+    text-decoration: none;
+    color: black;
+}
+
+.test-card-content h3 {
+    font-size: 1.2rem;
+    color: #4CAF50;
+}

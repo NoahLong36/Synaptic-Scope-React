@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Switch } from 'antd';
 
-const Header = ({ toggleMenu }) => {
+const Header = ({ onViewStateChange }) => {
+  const [viewState, setViewState] = useState(false);
+
+  const handleSwitch = () => {
+    setViewState(!viewState);
+    onViewStateChange(!viewState);
+  };
+
   return (
-    <header className="header">
-      <div className="home-container">
-        <div className="logo"><a href="/index.html">Synaptic Scope</a></div>
-        <nav className="nav">
-        </nav>
+    <header className='header'>
+      <div className="header-content">
+        <h1 className='title'><a>Synaptic Scope</a></h1>
+      </div>
+      <div className='switch-container'>
+        <Switch
+          defaultChecked={false}
+          checkedChildren="Researcher"
+          unCheckedChildren="User"
+          onChange={handleSwitch}
+        />
       </div>
     </header>
   );

@@ -1,0 +1,135 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+/* Container for the Game */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Main Game Area */
+.main-game {
+    text-align: center;
+    width: 100%;
+}
+
+/* Title */
+h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Round Display */
+#round-display {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+/* Number Display */
+#number-display {
+    font-size: 2.5rem;
+    color: #333;
+    height: 3rem;
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* User Input */
+#user-input {
+    font-size: 1rem;
+    padding: 0.75rem;
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+button {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0 0.5rem;
+}
+
+#start-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#submit-button {
+    background-color: #2196F3;
+    color: white;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+    background-color: #357a38; /* Darker green for start */
+}
+
+button:not(:disabled):hover {
+    transform: scale(1.05);
+}
+
+/* Result Text */
+#result {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Score Display */
+.score-box {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.score-box h2 {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+#score {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #E53935;
+}

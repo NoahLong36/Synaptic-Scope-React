@@ -1,0 +1,29 @@
+.test-planner {
+    padding: 20px;
+    color: #fff;
+    background-color: #141414;
+    text-align: center;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.test-button {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.test-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}

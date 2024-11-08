@@ -20,6 +20,7 @@ You may also see any lint errors in the console.
 3. npm install react-router-dom@6 //Install Library for accessing different pages
 4. npm install react-icons --save //Install Library for React supported icons
 5. npm install antd --save //Install ant-desgin
+
    
 ## Windows/Linux => Commands might differ but should be similar
 
@@ -38,5 +39,3 @@ You may also see any lint errors in the console.
 All Components go inside the compononents folder.  
 These components should be used called their respective 'page' file inside the pages folder.  
 Once the page has been put together it should already be rendered by App.js, and the sider should be able to navigate to your page.  
-
-
