@@ -1,0 +1,17 @@
+
+
+.userpass {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    height: 100vh;           /* Full viewport height */
+  }
+  
+  /* Styles the form container itself */
+  .userpass-header {
+    width: 300px;              /* Adjust form width as needed */
+    padding: 20px;
+    background-color: white;   /* Optional: adds a background color */
+    border-radius: 8px;        /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+  }
