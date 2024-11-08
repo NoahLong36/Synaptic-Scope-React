@@ -18,7 +18,6 @@ function Userpass() {
           </Form.Item>
           <Form.Item>
           <Button block type='primary' htmlType='submit'>Log In</Button>  
-          <Button type='primary' htmlType='submit'>Log In</Button>  
           </Form.Item>
         </Form>
       </header>
