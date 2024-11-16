@@ -1,0 +1,139 @@
+/* General Layout for Landing Page */
+.landing-page {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background-color: #f9fafb;
+    color: #1f2937;
+}
+
+.landing-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.landing-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4f46e5;
+}
+
+.landing-header p {
+    font-size: 1.2rem;
+    color: #6b7280;
+    margin-top: 1rem;
+}
+
+/* Test Plan Section */
+.test-plan-id-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.test-plan-id-section input {
+    width: 300px;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px 0 0 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.test-plan-id-section input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+.test-plan-id-section button {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0 8px 8px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.test-plan-id-section button:hover {
+    background-color: #4338ca;
+}
+
+/* Test Info Section */
+.test-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.test-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.test-card h2 {
+    font-size: 1.5rem;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.test-card p {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+}
+
+.test-card label {
+    display: block;
+    font-size: 1rem;
+    color: #1f2937;
+    margin-top: 1rem;
+}
+
+.test-card input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+/* Start Button */
+.start-button {
+    display: block;
+    background-color: #4f46e5;
+    color: white;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.start-button:hover {
+    background-color: #4338ca;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .test-plan-id-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .test-plan-id-section input {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 0.5rem;
+    }
+
+    .test-plan-id-section button {
+        border-radius: 8px;
+        width: 100%;
+    }
+}

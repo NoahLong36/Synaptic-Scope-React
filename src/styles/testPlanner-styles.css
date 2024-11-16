@@ -1,29 +1,45 @@
-.test-planner {
-    padding: 20px;
-    color: #fff;
-    background-color: #141414;
-    text-align: center;
+/* styles.css */
+.test-sequence-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-.button-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
+.test-component {
+  margin-bottom: 20px;
 }
 
-.test-button {
-    padding: 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+.navigation-controls {
+  margin-top: 20px;
 }
 
-.test-button:hover {
-    background-color: #555;
-    transform: scale(1.05);
+.next-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+  height: 10px;
+  width: 100%;
+  background-color: #e5e7eb;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4f46e5;
+  transition: width 0.3s ease-in-out;
+}
+
+.progress-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 1rem;
 }

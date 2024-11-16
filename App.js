@@ -10,12 +10,18 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import Patients from './pages/Patients';
-import TestPlanner from './pages/TestPlanner';
+import TestPlanner from './tests/TestPlanner';
+
+import DigitSpan from './tests/DigitSpan';
+import SeriesSeven from './tests/SeriesSeven';
+import VerbalMemoryTest from './tests/VerbalMemory';
+import LanguageMemoryTest from './tests/LanguageMemory';
+import ExecuteTestPlan from './pages/ExecuteTestPan';
+import LandingPage from './pages/LandingPage';
 
 
 function App() {
   const [viewState, setViewState] = useState(false);
-
 
   return(
     <div>
@@ -29,7 +35,14 @@ function App() {
               <Route path='/dashboard' element={<Dashboards />}></Route>
               <Route path='/contact' element={<Contact />}></Route>
               <Route path='/patients' element={<Patients />}></Route>
+              <Route path="/landing" element={<LandingPage />} />
+              <Route path="/landing/:testPlanId" element={<LandingPage />} />
               <Route path='/testPlanner' element={<TestPlanner />}></Route>
+              <Route path='/execute' element={<ExecuteTestPlan />}></Route>
+              <Route path='/tests/digitSpan' element={<DigitSpan />}></Route>
+              <Route path='/tests/seriesSeven' element={<SeriesSeven />}></Route>
+              <Route path='/tests/verbalMemory' element={<VerbalMemoryTest />}></Route>
+              <Route path='/tests/languageMemory' element={<LanguageMemoryTest />}></Route>
             </Routes>
           </Sider>
         </Router>

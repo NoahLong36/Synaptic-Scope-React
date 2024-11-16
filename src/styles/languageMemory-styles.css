@@ -1,0 +1,132 @@
+
+
+.game-container {
+    display: flex;
+    gap: 20px;
+    max-width: 900px;
+    width: 90%;
+    flex-direction: column; /* Ensure layout is column-based for smaller screens */
+    align-items: center;
+}
+
+.main-game {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+#grid {
+    display: grid;
+    gap: 0; /* Remove spacing between tiles */
+    margin: 0px auto;
+    max-width: 600px; /* Max grid width */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: calc(12px + 1vw); /* Adjust font size dynamically */
+    text-align: center;
+    padding: 0; /* Ensure no padding inside the tile */
+    overflow: hidden; /* Prevent overflow of text */
+    text-overflow: ellipsis; /* Ellipsis for overflow text */
+    white-space: nowrap; /* Prevent line wrapping */
+    aspect-ratio: 1 / 1; /* Ensure tiles remain square */
+    height: auto; /* Adjust height dynamically */
+}
+
+.tile.correct {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tile.incorrect {
+    background-color: #FF4C4C;
+    color: white;
+}
+
+.tile.missed {
+    background-color: #FFC107;
+    color: white;
+}
+
+.tile.selected {
+    background-color: #a0a0a0;
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.score-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 150px;
+}
+
+#score {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .game-container {
+        flex-direction: column;
+    }
+
+    #grid {
+        max-width: 400px; /* Smaller grid size for mobile */
+    }
+
+    .tile {
+        font-size: calc(10px + 1vw); /* Adjust font size for smaller screens */
+    }
+}

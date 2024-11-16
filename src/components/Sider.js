@@ -54,7 +54,7 @@ const menuItems = {
       icon: <FaTh />,
     },
     {
-      path: '/testPlanner',
+      path: 'landing/',
       name: 'Test Plans',
       icon: <FaRegFlag />,
     },
