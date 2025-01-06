@@ -15,27 +15,50 @@ body {
     align-items: center;
 }
 
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
 .title a {
     color: #4f46e5;
     text-decoration: none;
     font-size: 2.5rem;
     font-weight: bold;
     padding-left: 15px;
-    
 }
-
-/* Header Styling */
-.header {
+  
+.header-content {
+    flex: 1;
+}
+  
+.header-right {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    gap: 20px; /* Adds equal spacing between items */
 }
-
-.switch-container {
+  
+.user-name {
+    font-size: 16px;
+    font-weight: bold;
 }
+  
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+  
+  .switch-container {
+    margin-left: auto; /* Push switch to the right if needed */
+  }
+  
 
 /* Main Content Styling */
 .main {
@@ -103,3 +126,89 @@ body {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+/* Dashboard Specific Styling */
+.dashboard {
+    padding: 2rem;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.assignments-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.assignment-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.assignment-card h2 {
+    font-size: 1.5rem;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.assignment-card p {
+    margin: 0.5rem 0;
+    color: #4b5563;
+}
+
+@media (min-width: 768px) {
+    .assignments-section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Dashboard Enhancements */
+.category-heading {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #374151;
+    position: relative;
+    text-align: center;
+}
+
+.category-heading::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #d1d5db;
+    z-index: 0;
+}
+
+.category-heading span {
+    background: white;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.category-assignments {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .category-assignments {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+

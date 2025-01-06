@@ -11,6 +11,9 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import Patients from './pages/Patients';
 import TestPlanner from './tests/TestPlanner';
+import Database from './Database';
+import { UserProvider } from './UserContext';
+
 
 import DigitSpan from './tests/DigitSpan';
 import SeriesSeven from './tests/SeriesSeven';
@@ -22,30 +25,32 @@ import LandingPage from './pages/LandingPage';
 
 function App() {
   const [viewState, setViewState] = useState(false);
+  const [database] = useState(new Database()); 
 
   return(
     <div>
-        <Header onViewStateChange={setViewState}/>
-        <Router>
-          <Sider viewState={viewState}>
-            <Routes>
-              <Route path='/' element={<Home />}></Route>
-              <Route path='/account' element={<Account />}></Route>
-              <Route path='/login' element={<Login />}></Route>
-              <Route path='/dashboard' element={<Dashboards />}></Route>
-              <Route path='/contact' element={<Contact />}></Route>
-              <Route path='/patients' element={<Patients />}></Route>
-              <Route path="/landing" element={<LandingPage />} />
-              <Route path="/landing/:testPlanId" element={<LandingPage />} />
-              <Route path='/testPlanner' element={<TestPlanner />}></Route>
-              <Route path='/execute' element={<ExecuteTestPlan />}></Route>
-              <Route path='/tests/digitSpan' element={<DigitSpan />}></Route>
-              <Route path='/tests/seriesSeven' element={<SeriesSeven />}></Route>
-              <Route path='/tests/verbalMemory' element={<VerbalMemoryTest />}></Route>
-              <Route path='/tests/languageMemory' element={<LanguageMemoryTest />}></Route>
-            </Routes>
-          </Sider>
-        </Router>
+        <UserProvider>
+          <Header onViewStateChange={setViewState}/>
+          <Router>
+            <Sider viewState={viewState}>
+              <Routes>
+                <Route path='/' element={<Home />}></Route>
+                <Route path='/account' element={<Account />}></Route>
+                <Route path='/login' element={<Login database={database.state} />}></Route>
+                <Route path='/dashboard' element={<Dashboards />}></Route>
+                <Route path='/contact' element={<Contact />}></Route>
+                <Route path='/patients' element={<Patients />}></Route>
+                <Route path="/landing" element={<LandingPage />} />
+                <Route path="/landing/:testPlanId" element={<LandingPage />} />
+                <Route path='/testPlanner' element={<TestPlanner />}></Route>
+                <Route path='/tests/digitSpan' element={<DigitSpan />}></Route>
+                <Route path='/tests/seriesSeven' element={<SeriesSeven />}></Route>
+                <Route path='/tests/verbalMemory' element={<VerbalMemoryTest />}></Route>
+                <Route path='/tests/languageMemory' element={<LanguageMemoryTest />}></Route>
+              </Routes>
+            </Sider>
+          </Router>
+        </UserProvider>
     </div>
   );
 }

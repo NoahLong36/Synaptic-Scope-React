@@ -1,0 +1,58 @@
+/* Grid Area */
+#game-area {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Grid Layout */
+#grid {
+    display: grid;
+    gap: 0; /* Remove space between squares */
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Ensure the grid remains square */
+}
+
+/* Word Buttons */
+.word {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(1rem + 0.5vw); /* Responsive font size based on viewport */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.word.clicked {
+    background-color: #ffd700;
+    color: #333;
+    border-color: #ffcc00;
+}
+
+.word.correct {
+    background-color: #4caf50;
+    color: white;
+    border-color: #3e8e41;
+}
+
+.word.incorrect {
+    background-color: #f44336;
+    color: white;
+    border-color: #d32f2f;
+}
+
+/* Dynamic Grid Sizing */
+#grid[data-size='4'] {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#grid[data-size='6'] {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}

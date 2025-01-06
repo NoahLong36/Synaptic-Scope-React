@@ -1,0 +1,27 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between sections */
+    padding: 20px;
+}
+
+/* Sections */
+.section {
+    display: flex;
+    justify-content: center; /* Center boxes horizontally */
+    gap: 10px; /* Space between boxes */
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Individual boxes */
+.box {
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    flex: 1; /* Optional: makes the boxes equal width */
+}

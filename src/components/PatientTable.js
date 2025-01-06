@@ -1,31 +1,31 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../styles/patientStyles.css';
 
-const PatientTable = ({ data }) => {
+const PatientTable = ({ data, onPatientClick }) => {
   return (
     <table className="patient-table">
       <thead>
         <tr>
           <th>ID</th>
           <th>Name</th>
-          <th>Age</th>
-          <th>Test Status</th>
-          <th>Test Plan</th>
+          <th>Assignment Status</th>
+          <th>Due Date</th>
         </tr>
       </thead>
       <tbody>
         {data.map((patient) => (
           <tr key={patient.id}>
             <td>{patient.id}</td>
-            <td>{patient.name}</td>
-            <td>{patient.age}</td>
-            <td>{patient.assignedTest}</td>
-            <td>
-              <Link to={`/landing/${patient.testPlanId}`} className="test-plan-link">
-                {patient.testPlanId}
-              </Link>
+            <td
+              onClick={() => onPatientClick(patient)} 
+              style={{ cursor: 'pointer', textDecoration: 'underline', color: 'blue' }}
+            >
+              {patient.name}
             </td>
+            <td>
+              {patient.assignedTest === 'True' ? patient.testPlanId : 'Unassigned'}
+            </td>
+            <td>{patient.dueDate || 'N/A'}</td>
           </tr>
         ))}
       </tbody>

@@ -1,25 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Switch } from 'antd';
+import { useUser } from '../UserContext';
 
 const Header = ({ onViewStateChange }) => {
-  const [viewState, setViewState] = useState(false);
+  const { currentUser } = useUser();
 
-  const handleSwitch = () => {
-    setViewState(!viewState);
-    onViewStateChange(!viewState);
-  };
+  const profilePicture = currentUser?.profilePicture || 'https://via.placeholder.com/50';
 
   return (
-    <header className='header'>
+    <header className="header">
       <div className="header-content">
-        <h1 className='title'><a>Synaptic Scope</a></h1>
+        <h1 className="title"><a>Synaptic Scope</a></h1>
       </div>
-      <div className='switch-container'>
+      <div className="header-right">
+        {currentUser && <span className="user-name">{currentUser.fullName}</span>}
+        <img
+          src={profilePicture}
+          alt="Profile"
+          className="profile-picture"
+        />
         <Switch
           defaultChecked={false}
           checkedChildren="Researcher"
           unCheckedChildren="User"
-          onChange={handleSwitch}
+          onChange={onViewStateChange}
         />
       </div>
     </header>

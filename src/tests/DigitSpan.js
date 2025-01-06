@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import '../styles/digitSpan-styles.css';
 
 const DigitSpan = () => {
     const [sequence, setSequence] = useState([]);
@@ -44,7 +45,7 @@ const DigitSpan = () => {
         const isCorrect = sequence.join('') === userSequence;
         setDisplayMessage(isCorrect ? 'Correct! Well done!' : `Incorrect. The correct sequence was ${sequence.join('')}.`);
         setScore((prev) => prev + (isCorrect ? 0 : 1));
-        if (round < 5) setTimeout(() => setRound(round + 1), 2000);
+        if (round < 3) setTimeout(() => setRound(round + 1), 2000);
     };
 
     return (
